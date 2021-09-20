@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,7 +85,7 @@ a {
     <button type="submit" class='add_task btn btn-warning left-margin' name="add_task" value="save">Create</button>
     <br>
     <div class="back" class='btn btn-warning left-margin'>
-		  <a href="/task_management/task/list">List Task</a>
+		  <a href="/task/task/list">List Task</a>
     </div>
 </form>
 </div>

@@ -2,7 +2,6 @@
 require_once ('config.php');
 class DB{
 	protected $data;
-	protected $msg;
 	function execute($sql) {
 		$con = mysqli_connect(HOST, USERNAME, PASSWORD, DATABASE);
 		mysqli_query($con, $sql);

@@ -108,7 +108,7 @@ a {
     <button type="submit" class='update_task btn btn-warning left-margin' name="update_task" value="save">Update</button>
     <br>
     <div class="back" class='btn btn-warning left-margin'>
-		  <a href="/task_management/task/list">List Task</a>
+		  <a href="/task/task/list">List Task</a>
     </div>
 </form>
 </div>

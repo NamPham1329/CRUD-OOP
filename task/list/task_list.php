@@ -1,7 +1,9 @@
 <?php
-session_start(); 
+if(empty($_SESSION)){
+    session_start();
+} 
 if (empty($_SESSION['users'])) {
-    header("location:/task_management/user/login");
+    header("location:/task/user/login");
 }
 require_once("../../database/db_helper.php");
 

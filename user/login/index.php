@@ -1,4 +1,6 @@
-
+<?php
+require_once("login.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -85,8 +87,10 @@ span.psw {
         
     <button type="submit" name="login" value="login">Login</button>
   </div>
-  <span class="psw"><a href="/task_management/user/register">Do not have account?</a></span>
+  <span class="psw"><a href="/task/user/register">Do not have account?</a></span>
 </form>
+<?php
 
+?>
 </body>
 </html>

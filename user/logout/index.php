@@ -7,7 +7,7 @@ class Logout{
     {
         if(!empty($_POST['logout'])){
             session_destroy();
-            header('Location: /task_management/user/login');
+            header('Location: /task/user/login');
         } 
     }
 }

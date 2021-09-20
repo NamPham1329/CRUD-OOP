@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (empty($_SESSION['users'])) {
-    header("location:/task_management/user/login");
-} 
+    header("location:/task/user/login");
+}
 require_once('index.php');
 require_once ("../../database/db_helper.php");
     class newTask extends DB{
@@ -18,7 +18,10 @@ require_once ("../../database/db_helper.php");
             if(!empty($this->name) && !empty($this->detail))
             {
                 $sql = "INSERT INTO task(id, task_name, task_detail) values (null, '$this->name', '$this->detail')";
-                return $this->execute($sql);
+                $this->execute($sql);
+                return $this->msg = "thanh cong";
+            } else {
+                return $this->msg = "that bai";
             }
         }
     }
@@ -27,6 +30,6 @@ require_once ("../../database/db_helper.php");
         $task_name = $_POST['name'];
         $task_detail = $_POST['detail'];
         $newTask = new newTask($task_name, $task_detail);
-        return $newTask->new();
+        $data = $newTask->new();
     }
 ?>

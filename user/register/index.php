@@ -82,7 +82,7 @@ a {
     <button type="submit" class="registerbtn" name="register" value="register">Register</button>
   </div>
   <div class="container signin">
-    <p>Already have an account? <a href="/task_management/user/login">Sign in</a>.</p>
+    <p>Already have an account? <a href="/task/user/login">Sign in</a>.</p>
   </div>
 </form>
 

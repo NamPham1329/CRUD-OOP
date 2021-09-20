@@ -1,7 +1,7 @@
 <?php
-    session_start(); 
+    session_start();
     if (empty($_SESSION['users'])) {
-        header("location:/task_management/user/login");
+        header("location:/task/user/login");
     }
     require_once("../../database/db_helper.php");
     class deleteTask extends DB{
@@ -14,14 +14,14 @@
         {
             $sql = "DELETE FROM task WHERE id = '$this->id'";
             $this->execute($sql);
+            header('Location: /task/task/list');
         }
     }
-    print_r($_GET);
-    if(!empty($_GET['id']))
+    
+    if(!empty($_POST['delete']))
     {
-        $id = $_GET['id'];
+        $id = $_POST['delete'];
         $delete = new deleteTask($id);
-        $delete->delete();
-        header('Location: /task_management/task/list');
+        return $delete->delete(); 
     }
 ?>

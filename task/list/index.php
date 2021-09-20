@@ -1,4 +1,5 @@
 <?php
+	require_once("../delete/index.php");
 	require_once("task_list.php");
 	require_once("../../user/logout/index.php");
 ?>
@@ -79,16 +80,19 @@
 		<td>'.$item['id'].'</td>
 		<td>'.$item['task_name'].'</td>
 		<td>'.$item['task_detail'].'</td>
-		<td><a href="/task_management/task/update/?id='.$item['id'].'"><button>Edit</button></a></td>
-		<td><a href="/task_management/task/delete/?id='.$item['id'].'"><button>Delete</button></a></td>
+		<td style="width: 5%;"><a href="/task/task/update/?id='.$item['id'].'"><button class="btn btn-warning left-margin">Edit</button></a></td>
+		<td>
+			<form method="POST">
+				<button class="btn btn-warning left-margin" type="submit" name="delete" value="'.$item['id'].'">Delete</button>
+			</form>
+		</td>
 		</tr>';
 	}
 	?>
     </tbody>
 </table>
 <div class="back">
-		<a href="/task_management/task/insert" class="btn btn-warning left-margin">New Task</a>
+		<a href="/task/task/insert" class="btn btn-warning left-margin">New Task</a>
 </div>
-
 </body>
 </html>
